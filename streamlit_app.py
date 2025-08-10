@@ -85,5 +85,6 @@ if st.sidebar.button('Predict Popularity'):
         st.subheader('Score 0 - 100')
         # Assuming popularity is on a scale of 0-100
         st.write(f"{prediction[0]:.2f}")
+        st.write(f"Score 0-100")
     except Exception as e:
         st.error(f"An error occurred during prediction: {e}")
