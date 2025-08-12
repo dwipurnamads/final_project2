@@ -52,19 +52,19 @@ def user_input_features():
     song_duration_ms = st.sidebar.slider('Song Duration (ms)', 0, 1000000, 200000)
 
 
-    data = {'song_duration_ms': song_duration_ms,
-            'acousticness': acousticness,
-            'danceability': danceability,
-            'energy': energy,
+    data = {'Song duration': song_duration_ms,
+            'Acousticness': acousticness,
+            'Danceability': danceability,
+            'Energy': energy,
             'instrumentalness': instrumentalness,
-            'key': key,
-            'liveness': liveness,
-            'loudness': loudness,
-            'audio_mode': audio_mode,
-            'speechiness': speechiness,
-            'tempo': tempo,
-            'time_signature': time_signature,
-            'audio_valence': audio_valence}
+            'Key': key,
+            'Liveness': liveness,
+            'Loudness': loudness,
+            'Audio mode': audio_mode,
+            'Speechiness': speechiness,
+            'Tempo': tempo,
+            'Time signature': time_signature,
+            'Audio valence': audio_valence}
     features = pd.DataFrame(data, index=[0])
     return features
 
