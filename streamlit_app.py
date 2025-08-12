@@ -38,7 +38,13 @@ def user_input_features():
     key = st.sidebar.slider('Key', 0, 11, 5)
     liveness = st.sidebar.slider('Liveness', 0.0, 1.0, 0.5)
     loudness = st.sidebar.slider('Loudness', -60.0, 0.0, -30.0)
-    audio_mode = st.sidebar.radio('Audio Mode', [0, 1])
+    audio_mode_label = st.sidebar.radio('Audio Mode', ['Minor', 'Major'])
+    # Mengubah label kembali ke nilai numerik (0 atau 1)
+    if audio_mode_label == 'Major':
+        audio_mode = 1
+    else:
+        audio_mode = 0
+    #audio_mode = st.sidebar.radio('Audio Mode', [0, 1])
     speechiness = st.sidebar.slider('Speechiness', 0.0, 1.0, 0.5)
     tempo = st.sidebar.slider('Tempo', 0.0, 250.0, 120.0)
     time_signature = st.sidebar.slider('Time Signature', 0, 5, 4)
