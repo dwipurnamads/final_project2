@@ -38,7 +38,7 @@ def user_input_features():
     key = st.sidebar.slider('Key', 0, 11, 5)
     liveness = st.sidebar.slider('Liveness', 0.0, 1.0, 0.5)
     loudness = st.sidebar.slider('Loudness', -60.0, 0.0, -30.0)
-    audio_mode_label = st.sidebar.radio('Audio Mode', ['Minor', 'Major'])
+    audio_mode_label = st.sidebar.radio('Audio Mode', ['Minor (0)', 'Major (1)'])
     # Mengubah label kembali ke nilai numerik (0 atau 1)
     if audio_mode_label == 'Major':
         audio_mode = 1
